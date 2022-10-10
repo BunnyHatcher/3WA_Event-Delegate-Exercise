@@ -5,10 +5,10 @@ using UnityEngine;
 public class ShootBehavior : MonoBehaviour
 {
     [SerializeField] GameObject _bulletPrefab;
-    [SerializeField] Transform _cannon;
-    public Transform bulletGroup;
 
-    [SerializeField] float __bulletSpeed;
+    [SerializeField] GameObject _canon;
+
+    [SerializeField] float bulletSpeed;
 
     //Setting shot intervall
     [SerializeField] float _delayBetweenShots = 0.2f;
@@ -20,13 +20,14 @@ public class ShootBehavior : MonoBehaviour
 
     private void FireBullet()
     {
-        GameObject newBullet = Instantiate(_bulletPrefab, _cannon.position, _cannon.rotation, bulletGroup);
-        newBullet.GetComponent<BulletMovement>().Shoot(__bulletSpeed);
+        GameObject newBullet = Instantiate(_bulletPrefab, gameObject.transform.position, Quaternion.identity);
+        newBullet.GetComponent<BulletMovement>().Shoot(bulletSpeed);
     }
 
     private void Awake()
     {
         _nextShotTime = Time.time;
+        
     }
 
 
