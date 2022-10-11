@@ -12,6 +12,8 @@ public class ShootBehavior : MonoBehaviour
     [SerializeField] float _delayBetweenShots = 0.2f;
     private float _nextShotTime;
 
+    
+
 
 
 
@@ -61,8 +63,14 @@ public class ShootBehavior : MonoBehaviour
         
         {
             FireBullet();
+
+            var playerRenderer = GetComponent<SpriteRenderer>();
+            playerRenderer.color = Color.green;
+
             _nextShotTime = _delayBetweenShots + Time.time;
         }
+
+        
 
 
     }
