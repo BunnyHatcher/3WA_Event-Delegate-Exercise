@@ -128,11 +128,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 311613531291334413, guid: f291b4b22d4bd1348a40e90af8bcfd50, type: 3}
   m_PrefabInstance: {fileID: 311613531217604260}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &289863822 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7468298155506074065, guid: f291b4b22d4bd1348a40e90af8bcfd50, type: 3}
-  m_PrefabInstance: {fileID: 311613531217604260}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +182,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -233,6 +228,37 @@ MonoBehaviour:
   _target: {fileID: 79501737}
   _cameraOffset: -10
   _cameraSpeed: 15
+--- !u!1 &602777815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 602777816}
+  m_Layer: 0
+  m_Name: BulletGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &602777816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602777815}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.2599478, y: 0.023357512, z: -0.45969617}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &311613531217604260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -241,13 +267,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 79501739, guid: f291b4b22d4bd1348a40e90af8bcfd50, type: 3}
-      propertyPath: _canon.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 79501739, guid: f291b4b22d4bd1348a40e90af8bcfd50, type: 3}
-      propertyPath: _canon.Array.data[0]
+      propertyPath: _bulletGroup
       value: 
-      objectReference: {fileID: 289863822}
+      objectReference: {fileID: 602777816}
     - target: {fileID: 311613531291334401, guid: f291b4b22d4bd1348a40e90af8bcfd50, type: 3}
       propertyPath: m_Name
       value: Player
