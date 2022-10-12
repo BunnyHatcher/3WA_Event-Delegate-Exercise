@@ -9,8 +9,8 @@ public class KillCount : ScriptableObject
     public GameObject killCountInterface;
     public TextMeshProUGUI killCountTextGUI;
 
-    private int _killCount;
-    public int killCount
+    private int _killCount; // class member
+    public int killCount // property = container for getter/setter
     {
         get
         {

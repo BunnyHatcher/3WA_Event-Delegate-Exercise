@@ -70,7 +70,7 @@ public class ShootBehavior : MonoBehaviour
             _nextShotTime = _delayBetweenShots + Time.time;
         }
 
-        
+        //if (Time.time > LastSpawn + TimeBetweenSpawns)
 
 
     }
